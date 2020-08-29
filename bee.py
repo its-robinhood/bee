@@ -1,9 +1,16 @@
 import discord
 import pickle
 import os
+import mysql.connector
 
 from discord.ext import commands
 
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Jakerick174",
+    database="mydb"
+)
 
 bot = commands.Bot(command_prefix= "b ")
 bot.remove_command("help")
