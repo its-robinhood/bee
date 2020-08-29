@@ -7,7 +7,8 @@ import random
 bot = commands.Bot(command_prefix = "b ")
 
 mydb = mysql.connector.connect(
-    host="localhost",
+    host="192.168.0.45",
+    port="4444",
     user="robin",
     password="password",
     database="mydb"
@@ -142,7 +143,7 @@ async def hit(ctx, arg):
                     stillToBet.append(player, bot.highestBet - playerBet)
                     print(stillToBet)
                 else:
-                   print(stillToBet)      
+                    print(stillToBet)
     else:
         print("not your turn")
                 
@@ -152,4 +153,4 @@ async def hit(ctx, arg):
 
     
 
-bot.run("NzQ4MjAxNjAwNTM4OTAyNTk5.X0Z_Cg.0YJmWFemKd908qDbm9xvr85Qlcg")
+bot.run("token")
