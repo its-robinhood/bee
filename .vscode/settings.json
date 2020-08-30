@@ -1,3 +1,4 @@
 {
     "python.pythonPath": "C:\\Users\\robin\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "editor.suggest.maxVisibleSuggestions": 5,
 }
