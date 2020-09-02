@@ -1,5 +1,5 @@
 import discord
-
+import random
 import os
 import mysql.connector
 
@@ -19,6 +19,7 @@ bot.remove_command("help")
 
 print("starting up bee ...")
 
+
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name='bzzzzzzzzzzzzzzzzz'))
@@ -26,20 +27,24 @@ async def on_ready():
 
 @bot.command()
 async def hi(ctx):
+    charli = ["hi charli bee, mama bee believes you can do anything <:ghosthugright:748209219714547764>", "hyellow charli, did momma bee tell you she loves you to the moon and back?, well she does!"]
     if ctx.message.author.name == "heyimlu":
-        await ctx.send("hey lu you get two hugs because you're awesome, <:ghosthugright:748209219714547764> <:ghosthugright:748209219714547764>")
+        await ctx.send(random.choice(charli))
         return
     if ctx.message.author.name == "Charli":
-        await ctx.send("hi charli bee, mama bee believes you can do anything <:ghosthugright:748209219714547764>")
+        await ctx.send()
         return
     if ctx.message.author.name == "THE SEER":
         await ctx.send("hi seer, bee just wants to say she loves you.")
         return
     if ctx.message.author.name == "KermisKlant":
-        await ctx.send("")
+        await ctx.send("hyellow fries, mama bee and charli bee beelieve you can do anything")
+        return
     if ctx.message.author.name == "Cavemaker":
         await ctx.send("hi plop, have a plop cookie 🍪")
+        return
     await ctx.send("hyellow <:ghosthugright:748209219714547764>")
+
 
 @bot.command()
 async def blackjack(ctx):
@@ -63,6 +68,22 @@ async def cookies(ctx, *arg):
     if arg[0] == "infinite":
         while True:
             await ctx.send("🍪")
+@bot.command()
+async def inject(ctx, arg):
+    if ctx.message.author.name == "robinhood":
+        cursor.execute(arg, multi=False)
+        result = cursor.fetchall()
+        await ctx.send(result)
+@bot.command()
+async def ping(ctx, arg):
+    if True:
+        print(arg)
+        while True:
+            await ctx.send(arg)
+    else:
+        await ctx.send("that function is temporarily disabled because too powerfull")
+
+
 
 
 
