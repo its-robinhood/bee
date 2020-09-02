@@ -27,37 +27,62 @@ bot.robin = pickle.load(open('robin.bat', 'rb'))
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name='bzzzzzzzzzzzzzzzzz'))
     print("bee is ready!")
-
+bot.fries = 0
+bot.ender = 0
+bot.charli = 0
+bot.seer = 0
+bot.plop = 0
 @bot.command()
 async def hi(ctx):
 
     ender = ["hi ender, bee thinks you're really smart <:ghosthugright:748209219714547764>", "hyellow ender, make sure to feed your rabbits", 
-            "Hey mr.rabbit, do neutrinos have mass?"]
+            "Hey mr.rabbit, do neutrinos have mass?", "wouldnt you like to know rabbit boy", "hyellowowowowowow make sure to go to bed at 10:30pm you have to stay smart and feed your rabbits yes you must achieve something in life and not be a complete failure like charli is"]
     charli = ["hi charli bee, mama bee believes you can do anything <:ghosthugright:748209219714547764>",
                  "hyellow charli, did momma bee tell you she loves you to the moon and back?, well she does!", 
                  "hyellow charli smart bee thinks you are very smart but you should give yourself a break sometimes because you already achieved great things and will keep doing that and bee thinks youre awesome"]
 
     fries = ["hyellow fries a bee here thinks youre really funny and smart and youre a great friend but you must also stop smoking and forcing yourself to go to the gym every day but for the rest youre a really nice guy",
-                 "hyellow fries, mama bee and charli bee beelieve you can do anything", "hi fries, you're such a nice guy and hacker bee looks up to you!"]
-    seer = ["hi seer, bee just wants to say she loves you.", "Hi seer. Don't forget to take a shit on your cousins car today!", "Hey Seer. Big bee doesn't want you to leave again"]
+                 "hyellow fries, mama bee and charli bee beelieve you can do anything",
+                  "hi fries, you're such a nice guy and hacker bee looks up to you!", "buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz. buzz buzz buzz? buzz!", 
+                  "hyellow i love you as frend"]
+    seer = ["hi seer, bee just wants to say she loves you.", "Hi seer. Don't forget to take a shit on your cousins car today!",
+             "Hey Seer. Big bee doesn't want you to leave again", "hi youre the best fish there is, and electro too, keep it up. #fishgang."]
+    plop = ["hyellow, would you like a bee cookie? its a plop cookie but instead of having the word plop and plops hat, its a bee!", "buzzzzbzuzuzuuzuzuzbuzzzbuzzbuzzbuzzbuzz buzzzzzz"]
+
+    
 
     if ctx.message.author.name == "heyimlu":
         await ctx.send("hi lu, you get two hugs because you're awesome <:ghosthugright:748209219714547764> <:ghosthugright:748209219714547764>")
         return
     if ctx.message.author.name == "Charli":
-        await ctx.send(random.choice(charli))
+        await ctx.send(charli[bot.charli])
+        bot.charli = bot.charli + 1
+        if bot.charli == len(charli):
+            bot.charli = 0
         return
     if ctx.message.author.name == "THE SEER":
-        await ctx.send(random.choice(seer))
+        await ctx.send(seer[bot.seer])
+        bot.seer = bot.seer + 1
+        if bot.seer == len(seer):
+            bot.seer = 0
         return
     if ctx.message.author.name == "KermisKlant":
-        await ctx.send(random.choice(fries))
+        await ctx.send(fries[bot.fries])
+        bot.fries = bot.fries + 1
+        if bot.fries == len(fries):
+            bot.fries = 0
         return
     if ctx.message.author.name == "Cavemaker":
-        await ctx.send("hi plop, have a plop cookie 🍪")
+        await ctx.send(plop[bot.plop])
+        bot.plop = bot.plop + 1
+        if bot.plop == len(plop):
+            bot.plop = 0
         return
     if ctx.message.author.name == "endergamer0134":
-        await ctx.send(random.choice(ender))
+        await ctx.send(ender[bot.ender])
+        bot.ender = bot.ender + 1
+        if bot.ender == len(ender):
+            bot.ender = 0
         return
     if ctx.message.author.name == "robinhood":
         await ctx.send(random.choice(bot.robin))
