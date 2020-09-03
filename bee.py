@@ -22,6 +22,8 @@ bot.remove_command("help")
 print("starting up bee ...")
 
 bot.spam = False
+
+
 bot.robin = []
 #pickle.dump(bot.robin, open("robin.bat", "wb"))
 bot.robin = pickle.load(open('robin.bat', 'rb'))
