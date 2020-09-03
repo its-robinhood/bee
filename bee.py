@@ -20,7 +20,7 @@ bot = commands.Bot(command_prefix= "b ")
 bot.remove_command("help")
 
 print("starting up bee ...")
-
+print("test")
 bot.robin = []
 #pickle.dump(bot.robin, open("robin.bat", "wb"))
 bot.robin = pickle.load(open('robin.bat', 'rb'))
