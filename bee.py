@@ -20,7 +20,8 @@ bot = commands.Bot(command_prefix= "b ")
 bot.remove_command("help")
 
 print("starting up bee ...")
-print("test")
+
+bot.spam = False
 bot.robin = []
 #pickle.dump(bot.robin, open("robin.bat", "wb"))
 bot.robin = pickle.load(open('robin.bat', 'rb'))
@@ -121,6 +122,7 @@ async def cookie(ctx):
     await ctx.send("🍪")
 @bot.command()
 async def cookies(ctx, *arg):
+    bot.spam = True
     cookies = 3
     test = 1
     while test <= cookies:
@@ -137,6 +139,7 @@ async def inject(ctx, arg):
         await ctx.send(result)
 @bot.command()
 async def ping(ctx, arg):
+    bot.spam = True
     if True:
         print(arg)
         while True:
@@ -149,7 +152,9 @@ async def himessage(ctx, arg):
     pickle.dump(bot.robin, open("robin.bat", "wb"))
 
 
-
+@bot.command()
+async def stop(ctx):
+    bot.spam = False
 
 
 
