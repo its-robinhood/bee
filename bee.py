@@ -60,9 +60,9 @@ async def hi(ctx):
 
     if ctx.message.author.name == "heyimlu":
         await ctx.send(lu[bot.lu])
-	bot.lu = bot.lu + 1
-	if bot.lu == len(lu):
-	    bot.lu = 0
+        bot.lu = bot.lu + 1
+        if bot.lu == len(lu):
+	        bot.lu = 0
         return
     if ctx.message.author.name == "Charli":
         await ctx.send(charli[bot.charli])
