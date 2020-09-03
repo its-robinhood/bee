@@ -7,7 +7,8 @@ import pickle
 from discord.ext import commands
 
 mydb = mysql.connector.connect(
-    host="192.168.0.45",
+    host="localhost",
+    #host="192.168.0.45",
     port='4444',
     user="robin",
     password="password",
@@ -32,6 +33,8 @@ bot.ender = 0
 bot.charli = 0
 bot.seer = 0
 bot.plop = 0
+bot.electro = 0
+bot.lu = 0
 @bot.command()
 async def hi(ctx):
 
@@ -46,13 +49,20 @@ async def hi(ctx):
                   "hi fries, you're such a nice guy and hacker bee looks up to you!", "buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz. buzz buzz buzz? buzz!", 
                   "hyellow i love you as frend"]
     seer = ["hi seer, bee just wants to say she loves you.", "Hi seer. Don't forget to take a shit on your cousins car today!",
-             "Hey Seer. Big bee doesn't want you to leave again", "hi youre the best fish there is, and electro too, keep it up. #fishgang."]
+             "Hey Seer. Big bee doesn't want you to leave again", "hi youre the best fish there is, and electro too, keep it up #fishgang."]
     plop = ["hyellow, would you like a bee cookie? its a plop cookie but instead of having the word plop and plops hat, its a bee!", "buzzzzbzuzuzuuzuzuzbuzzzbuzzbuzzbuzzbuzz buzzzzzz"]
-
+    lu = ["Bee does not want Lu to steal more coastlines",
+                 "bee thinks you are a very nice and smart person and don't say you're dumb",
+		 "hi lu, you get two hugs because you're awesome <:ghosthugright:748209219714547764> <:ghosthugrithugright:748209219714547764>"]
     
+    electro = ["hi you're the best fish there is, and Seer is too, keep it up #fishgang"]
+
 
     if ctx.message.author.name == "heyimlu":
-        await ctx.send("hi lu, you get two hugs because you're awesome <:ghosthugright:748209219714547764> <:ghosthugright:748209219714547764>")
+        await ctx.send(lu[bot.lu])
+	bot.lu = bot.lu + 1
+	if bot.lu == len(lu):
+	    bot.lu = 0
         return
     if ctx.message.author.name == "Charli":
         await ctx.send(charli[bot.charli])
@@ -86,6 +96,13 @@ async def hi(ctx):
         return
     if ctx.message.author.name == "robinhood":
         await ctx.send(random.choice(bot.robin))
+        return
+
+    if ctx.message.author.name == "ElectroYT":
+        await ctx.send(electro[bot.electro])
+        bot.electro = bot.electro + 1
+        if bot.electro == len(electro):
+            bot.electro = 0
         return
     await ctx.send("hyellow <:ghosthugright:748209219714547764>")
 
