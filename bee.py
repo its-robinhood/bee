@@ -157,7 +157,7 @@ async def himessage(ctx, arg):
 async def hug(ctx, *arg):
     await ctx.send("<:ghosthugright:748209219714547764>")
     if arg[0] == "infinite":
-	bot.spam = True
+        bot.spam = True
         while bot.spam:
             await ctx.send("<:ghosthugright:748209219714547764>")
 
