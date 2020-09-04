@@ -131,7 +131,8 @@ async def cookies(ctx, *arg):
         await ctx.send("🍪")
         test = test + 1
     if arg[0] == "infinite":
-        while True:
+        while bot.spam:
+            
             await ctx.send("🍪")
 @bot.command()
 async def inject(ctx, arg):
