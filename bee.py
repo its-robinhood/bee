@@ -154,6 +154,13 @@ async def himessage(ctx, arg):
     bot.robin.append(arg)
     pickle.dump(bot.robin, open("robin.bat", "wb"))
 
+@bot.command()
+async def hug(ctx, *arg):
+    await ctx.send("<:ghosthugright:748209219714547764>")
+    if arg[0] == "infinite":
+        while bot.spam:
+            await ctx.send("<:ghosthugright:748209219714547764>")
+
 
 @bot.command()
 async def stop(ctx):
