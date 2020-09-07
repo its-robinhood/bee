@@ -129,10 +129,10 @@ async def cookies(ctx, *arg):
     test = 1
     while test <= cookies:
         await ctx.send("🍪")
-        test = test + 1
-    if arg[0] == "infinite":
-        while bot.spam:            
-            await ctx.send("🍪")
+        test6 = test + 1
+    #if arg[0] == "infinite":
+        #while bot.spam:            
+            #await ctx.send("🍪")
 @bot.command()
 async def inject(ctx, arg):
     if ctx.message.author.name == "robinhood":
@@ -142,7 +142,7 @@ async def inject(ctx, arg):
 @bot.command()
 async def ping(ctx, arg):
     bot.spam = True
-    if True:
+    if False:
         print(arg)
         while True:
             await ctx.send(arg)
@@ -156,10 +156,10 @@ async def himessage(ctx, arg):
 @bot.command()
 async def hug(ctx, *arg):
     await ctx.send("<:ghosthugright:748209219714547764>")
-    if arg[0] == "infinite":
-        bot.spam = True
-        while bot.spam:
-            await ctx.send("<:ghosthugright:748209219714547764>")
+   # if arg[0] == "infinite":
+       # bot.spam = True
+       # while bot.spam:
+           # await ctx.send("<:ghosthugright:748209219714547764>")
 
 
 @bot.command()
