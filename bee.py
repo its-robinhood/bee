@@ -38,6 +38,7 @@ bot.seer = 0
 bot.plop = 0
 bot.electro = 0
 bot.lu = 0
+bot.jerry = 0
 @bot.command()
 async def hi(ctx):
 
@@ -47,7 +48,7 @@ async def hi(ctx):
                  "hyellow charli, did momma bee tell you she loves you to the moon and back?, well she does!", 
                  "hyellow charli smart bee thinks you are very smart but you should give yourself a break sometimes because you already achieved great things and will keep doing that and bee thinks youre awesome"]
 
-    fries = ["hyellow fries a bee here thinks youre really funny and smart and youre a great friend but you must also stop smoking and forcing yourself to go to the gym every day but for the rest youre a really nice guy",
+    fries = ["hyellow you are very nice person", "i", "appreciate", "you", "alot", "hyellow you are my bestest frend", "hyellow fries a bee here thinks youre really funny and smart and youre a great friend but you must also stop smoking and forcing yourself to go to the gym every day but for the rest youre a really nice guy",
                  "hyellow fries, mama bee and charli bee beelieve you can do anything",
                   "hi fries, you're such a nice guy and hacker bee looks up to you!", "buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz buzz. buzz buzz buzz? buzz!", 
                   "hyellow i love you as frend"]
@@ -59,7 +60,7 @@ async def hi(ctx):
 		 "hi lu, you get two hugs because you're awesome <:ghosthugright:748209219714547764> <:ghosthugrithugright:748209219714547764>"]
     
     electro = ["hi you're the best fish there is, and Seer is too, keep it up #fishgang"]
-
+    jerry = ["you're doing great, i'm proud of you <:ghosthugright:748209219714547764>", "remember to eat regularly!", "take care of yourself <3"]
 
     if ctx.message.author.name == "heyimlu":
         await ctx.send(lu[bot.lu])
@@ -101,6 +102,11 @@ async def hi(ctx):
         await ctx.send(random.choice(bot.robin))
         return
 
+    if ctx.message.author.name == "Jerry":
+	await ctx.send(jerry[bot.jerry])
+	bot.jerry = bot.jerry + 1
+	if bot.jerry == len(jerry):
+	    bot.jerry = 0
     if ctx.message.author.name == "ElectroYT":
         await ctx.send(electro[bot.electro])
         bot.electro = bot.electro + 1
@@ -165,6 +171,10 @@ async def hug(ctx, *arg):
 @bot.command()
 async def stop(ctx):
     bot.spam = False
+@bot.command()
+async def date(ctx):
+    if ctx.message.author.name == "robinhood":
+         await ctx.send("Yes i would love to robin!")
 
 
 
