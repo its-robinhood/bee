@@ -165,6 +165,11 @@ async def hug(ctx, *arg):
 @bot.command()
 async def stop(ctx):
     bot.spam = False
+@bot.command()
+async def script(ctx):
+    server = ctx.message.server
+    voice_bot = bot.voice_client_in(server)
+
 
 
 
