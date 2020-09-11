@@ -103,10 +103,10 @@ async def hi(ctx):
         return
 
     if ctx.message.author.name == "Jerry":
-	await ctx.send(jerry[bot.jerry])
-	bot.jerry = bot.jerry + 1
-	if bot.jerry == len(jerry):
-	    bot.jerry = 0
+	    await ctx.send(jerry[bot.jerry])
+	    bot.jerry = bot.jerry + 1
+	    if bot.jerry == len(jerry):
+	        bot.jerry = 0
     if ctx.message.author.name == "ElectroYT":
         await ctx.send(electro[bot.electro])
         bot.electro = bot.electro + 1
