@@ -7,8 +7,8 @@ import pickle
 from discord.ext import commands
 
 mydb = mysql.connector.connect(
-    #host="localhost",
-    host="192.168.0.45",
+    host="localhost",
+    #host="192.168.0.45",
     port='4444',
     user="robin",
     password="password",
@@ -21,10 +21,8 @@ bot.remove_command("help")
 
 print("starting up bee ...")
 
-tokendir = 'C:/Users/robin/OneDrive/Documenten/GitHub/bee/.gitignore/token.bat'
-
 bot.spam = False
-token = pickle.load(open(tokendir, 'rb'))
+token = pickle.load(open('token.bat', 'rb'))
 
 bot.robin = []
 #pickle.dump(bot.robin, open("robin.bat", "wb"))
