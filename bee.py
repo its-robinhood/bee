@@ -21,8 +21,10 @@ bot.remove_command("help")
 
 print("starting up bee ...")
 
+tokendir = 'C:/Users/robin/OneDrive/Documenten/GitHub/bee/.gitignore/token.bat'
+
 bot.spam = False
-token = pickle.load(open('token.bat', 'rb'))
+token = pickle.load(open(tokendir, 'rb'))
 
 bot.robin = []
 #pickle.dump(bot.robin, open("robin.bat", "wb"))
