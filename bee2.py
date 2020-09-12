@@ -1,7 +1,10 @@
 import discord
 from discord.ext import commands
+import pickle
 
 bot = commands.Bot(command_prefix="!")
+
+token = pickle.load(open('token.bat', 'rb'))
 
 print("starting up bee2")
 
@@ -19,4 +22,4 @@ async def on_member_update(before, after):
     if before.nick == "robinhood":
         await after.edit(nick="try to change my nickname CHARLI")
 
-bot.run("NzQ4MjAxNjAwNTM4OTAyNTk5.X0Z_Cg.0YJmWFemKd908qDbm9xvr85Qlcg")
+bot.run(token)

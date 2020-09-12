@@ -3,6 +3,7 @@ from discord.ext import commands
 from random import randint
 import mysql.connector
 import random
+import pickle
 
 bot = commands.Bot(command_prefix = "b ")
 
@@ -15,6 +16,7 @@ mydb = mysql.connector.connect(
 )
 cursor = mydb.cursor()
 
+token = pickle.load(open('token.bat', 'rb'))
 
 bot.players = []
 bot.cards = [("ace heart", 1), ("ace clubs", 1), ("ace diamonds", 1), ("ace spades", 1),
@@ -314,4 +316,4 @@ async def stand(ctx):
 
     
 
-bot.run("NzQ4MjAxNjAwNTM4OTAyNTk5.X0Z_Cg.0YJmWFemKd908qDbm9xvr85Qlcg")
+bot.run(token)
