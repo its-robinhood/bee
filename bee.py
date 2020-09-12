@@ -1,12 +1,13 @@
 import discord
 import random
 import os
-import mysql.connector
+#import mysql.connector
 import pickle
 
 from discord.ext import commands
 
 #mydb = mysql.connector.connect(
+
 #    host="localhost",
 #    #host="192.168.0.45",
 #    port='4444',
@@ -22,7 +23,10 @@ bot.remove_command("help")
 print("starting up bee ...")
 
 bot.spam = False
+
 #pickle.dump('token', open('token.bat', 'wb'))
+
+
 token = pickle.load(open('token.bat', 'rb'))
 
 bot.robin = []
