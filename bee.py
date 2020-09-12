@@ -6,15 +6,15 @@ import pickle
 
 from discord.ext import commands
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    #host="192.168.0.45",
-    port='4444',
-    user="robin",
-    password="password",
-    database="mydb"
-)
-cursor = mydb.cursor()
+#mydb = mysql.connector.connect(
+#    host="localhost",
+#    #host="192.168.0.45",
+#    port='4444',
+#    user="robin",
+#    password="password",
+#    database="mydb"
+#)
+#cursor = mydb.cursor()
 
 bot = commands.Bot(command_prefix= "b ")
 bot.remove_command("help")
@@ -22,6 +22,7 @@ bot.remove_command("help")
 print("starting up bee ...")
 
 bot.spam = False
+#pickle.dump('token', open('token.bat', 'wb'))
 token = pickle.load(open('token.bat', 'rb'))
 
 bot.robin = []
@@ -101,12 +102,12 @@ async def hi(ctx):
     if ctx.message.author.name == "robinhood":
         await ctx.send(random.choice(bot.robin))
         return
-
     if ctx.message.author.name == "Jerry":
-	    await ctx.send(jerry[bot.jerry])
-	    bot.jerry = bot.jerry + 1
-	    if bot.jerry == len(jerry):
-	        bot.jerry = 0
+        await ctx.send(jerry[bot.jerry])
+        bot.jerry = bot.jerry + 1
+        if bot.jerry == len(jerry):
+            bot.jerry = 0
+        return
     if ctx.message.author.name == "ElectroYT":
         await ctx.send(electro[bot.electro])
         bot.electro = bot.electro + 1
