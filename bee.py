@@ -22,7 +22,7 @@ bot.remove_command("help")
 print("starting up bee ...")
 
 bot.spam = False
-pickle.dump("token", open('token.bat', 'wb'))
+#pickle.dump("token", open('token.bat', 'wb'))
 token = pickle.load(open('token.bat', 'rb'))
 
 bot.robin = []
