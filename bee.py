@@ -67,7 +67,7 @@ async def hi(ctx):
     electro = ["hi you're the best fish there is, and Seer is too, keep it up #fishgang"]
     jerry = ["you're doing great, i'm proud of you <:ghosthugright:748209219714547764>", "remember to eat regularly!", "take care of yourself <3","what the fuck are you doing in my code"]
 
-    if ctx.message.author.name == "heyimlu":
+    if ctx.message.author.name == "itsalex":
         await ctx.send(lu[bot.lu])
         bot.lu = bot.lu + 1
         if bot.lu == len(lu):
