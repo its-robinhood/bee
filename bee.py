@@ -60,7 +60,7 @@ async def hi(ctx):
     seer = ["hi seer, bee just wants to say she loves you.", "Hi seer. Don't forget to take a shit on your cousins car today!",
              "Hey Seer. Big bee doesn't want you to leave again", "hi youre the best fish there is, and electro too, keep it up #fishgang."]
     plop = ["hyellow, would you like a bee cookie? its a plop cookie but instead of having the word plop and plops hat, its a bee!", "buzzzzbzuzuzuuzuzuzbuzzzbuzzbuzzbuzzbuzz buzzzzzz"]
-    lu = ["Bee does not want Lu to steal more coastlines",
+    lu = ["Just so u know, ur loved honey. Get my beehug commanded by Jerry <3","Bee does not want Lu to steal more coastlines",
                  "bee thinks you are a very nice and smart person and don't say you're dumb",
 		 "hi lu, you get two hugs because you're awesome <:ghosthugright:748209219714547764> <:ghosthugrithugright:748209219714547764>","Bee needs to tell you that you are really loved, she heard that from a person that really loves you"]
     
