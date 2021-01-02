@@ -69,7 +69,7 @@ async def hi(ctx):
         if bot.lu == len(lu):
 	        bot.lu = 0
         return
-    if ctx.message.author.name == "Charli":
+    if ctx.message.author.name == "Charbee":
         await ctx.send(charli[bot.charli])
         bot.charli = bot.charli + 1
         if bot.charli == len(charli):
@@ -124,6 +124,10 @@ async def blackjack(ctx):
     os.system('python3 blackjack.py')
 
 @bot.command()
+async def charli(ctx):
+    await ctx.send("what color panties are you wearing charli?")
+
+@bot.command()
 async def stickbug(ctx):
     await ctx.send(file=discord.File('stickbug.gif'))
 @bot.command()
@@ -140,12 +144,12 @@ async def cookies(ctx, *arg):
     #if arg[0] == "infinite":
         #while bot.spam:            
             #await ctx.send("🍪")
-@bot.command()
-async def inject(ctx, arg):
-    if ctx.message.author.name == "robinhood":
-        cursor.execute(arg, multi=False)
-        result = cursor.fetchall()
-        await ctx.send(result)
+#@bot.command()
+#async def inject(ctx, arg):
+    #if ctx.message.author.name == "robinhood":
+        #cursor.execute(arg, multi=False)
+        #result = cursor.fetchall()
+        #await ctx.send(result)
 @bot.command()
 async def ping(ctx, arg):
     bot.spam = True
@@ -176,6 +180,14 @@ async def stop(ctx):
 async def script(ctx):
     server = ctx.message.server
     voice_bot = bot.voice_client_in(server)
+
+
+
+@bot.command()
+async def ball(ctx, question):
+    answers = ["yes", "no", "perhaps", "idk", "ask god", "bitch why would i answer that"]
+    await ctx.send(random.choice(answers))
+
 
 
 
